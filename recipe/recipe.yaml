@@ -1,16 +1,16 @@
 context:
-  version: "0.14.0"
+  version: "0.15.0"
 
 package:
   name: wasm-pack
   version: ${{ version }}
 
 source:
-  url: https://github.com/drager/wasm-pack/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 60e866ce851219b18b7e16b2dbcd8323d5af0eac7d3a8a616bec3bd62fc051c4
+  url: https://github.com/wasm-bindgen/wasm-pack/archive/refs/tags/v${{ version }}.tar.gz
+  sha256: 04530d7c215a46cc5468796de3c69fd6620fd78612578545d57f9806aa0c64a4
 
 build:
-  number: 1
+  number: 0
   script:
     env:
       CARGO_PROFILE_RELEASE_STRIP: symbols
@@ -39,7 +39,7 @@ tests:
         - wasm-pack
 
 about:
-  homepage: https://github.com/drager/wasm-pack
+  homepage: https://github.com/wasm-bindgen/wasm-pack
   summary: Your favorite Rust to Wasm workflow tool!
   description: |
     wasm-pack is a one-stop-shop for building and working with Rust-generated
@@ -52,8 +52,8 @@ about:
     - LICENSE-APACHE
     - LICENSE-MIT
     - THIRDPARTY.yml
-  documentation: https://drager.github.io/wasm-pack/
-  repository: https://github.com/drager/wasm-pack
+  documentation: https://wasm-bindgen.github.io/wasm-pack/book
+  repository: https://github.com/wasm-bindgen/wasm-pack
 
 extra:
   recipe-maintainers:
